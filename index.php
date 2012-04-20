@@ -2,16 +2,16 @@
 		
 		<section id="columnleft">
 
-    	<header>
-    	
-    	<div id="title"><h1><a href="<?php bloginfo( 'url' ); ?>">Toynbee Prize Foundation</a></h1></div>
-    	
-    	</header>
+            <header>
+            
+                <div id="title"><h1><a href="<?php bloginfo( 'url' ); ?>">Toynbee Prize Foundation</a></h1></div>
+            
+            </header>
+		
+			<section id="leftcontent">
+        
+        		<p class="intro">The Toynbee Prize Foundation contributes to the development of the social sciences, as defined from a broad historical view of human society and of human and social problems.</p>
 
-		<p class="intro">The Toynbee Prize Foundation contributes to the development of the social sciences, as defined from a broad historical view of human society and of human and social problems.</p>
-
-
-			<section id="posts">
 			
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 		

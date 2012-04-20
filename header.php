@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,300italic|Josefin+Slab:300,300italic|Vollkorn:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,300italic,700italic,700|Josefin+Slab:300,300italic|Vollkorn:400italic,700italic,400,700" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
