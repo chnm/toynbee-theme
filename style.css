@@ -285,6 +285,7 @@ nav {
 /* ------ Single Page ------ */
 
 #page {
+	min-height: 300px;
 	background: url('img/top-bg.jpg') no-repeat;
 	background-position: 5px -53px;
 	margin: 0;
