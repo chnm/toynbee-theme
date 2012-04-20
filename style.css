@@ -173,6 +173,7 @@ nav {
     nav li a, nav li span {
 		padding: 2px 10px 0 10px;
         height: 100%;
+        display: block;        
         }
 	
 	nav a:link, nav a:visited { 
@@ -212,7 +213,6 @@ nav {
     	background-color:rgba(50,50,50,.8);
     		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050);
     		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050)";    
-        display: block;
     }
 				
 #sidebar {
@@ -240,10 +240,6 @@ nav {
 			font-size: 1em;
 			letter-spacing: .075em;
 			}
-			
-		#sidebar .current_page_item {
-			list-style-type: square;
-			}	
 
 		.subnav li:not(:last-child), .widget_nav_menu li:not(:last-child) {
 			}
