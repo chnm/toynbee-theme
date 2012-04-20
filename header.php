@@ -23,16 +23,4 @@
 
 	<div class="wrap">
 	
-	<header>
-	
-	<div id="title"><h1><a href="<?php bloginfo( 'url' ); ?>">Toynbee Prize Foundation</a></h1></div>
-	
-		<nav>
-		
-			<?php wp_nav_menu( array ('menu' => 'Home Menu')); ?>
-		
-		</nav>
-	
-	</header>
-	
 	<section id="content" <?php post_class(); ?>>

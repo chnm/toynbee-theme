@@ -1,3 +1,16 @@
+			<section id="sidebar">
+			
+			    <?php get_search_form(); ?>
+			
+				<nav>
+		
+        			<?php wp_nav_menu( array ('menu' => 'Home Menu')); ?>
+        		
+        		</nav>
+						
+			</section>
+
+
 	</section>
 		
 	</div>

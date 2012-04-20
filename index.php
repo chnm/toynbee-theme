@@ -1,22 +1,16 @@
 <?php define( 'WP_USE_THEMES', false ); get_header(); ?>
-	
-		<p class="intro">The Toynbee Prize Foundation contributes to the development of the social sciences, as defined from a broad historical view of human society and of human and social problems.</p>
-	
+		
 		<section id="columnleft">
 
-			<section id="sidebar">
+    	<header>
+    	
+    	<div id="title"><h1><a href="<?php bloginfo( 'url' ); ?>">Toynbee Prize Foundation</a></h1></div>
+    	
+    	</header>
 
-				<ul>
-					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home') ) : ?>
-					 <li id="about">
-						 <h2>About</h2>
-						 <p>The Toynbee Prize Foundation contributes to the development of the social sciences, as defined from a broad historical view of human society and of human and social problems.</p>
-					 </li>
-					<?php endif; ?>
-				</ul>
-		
-			</section>
-		
+		<p class="intro">The Toynbee Prize Foundation contributes to the development of the social sciences, as defined from a broad historical view of human society and of human and social problems.</p>
+
+
 			<section id="posts">
 			
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
