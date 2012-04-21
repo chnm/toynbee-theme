@@ -184,8 +184,6 @@ nav {
         }
         
     nav .arrow a:after {
-        width: 0px;
-        height: 0px;
         content: "";
         border-top: 5px solid transparent;
         border-left: 5px solid #a2ccd3;
@@ -193,25 +191,22 @@ nav {
         display: inline-block;
         margin-left: 10px;
         }
+        
+    nav .current_page_item.arrow span:after {
+        content: "";
+        border-top: 5px solid transparent;
+        border-left: 5px solid #ebeadc;
+        border-bottom: 5px solid transparent;
+        display: inline-block;
+        margin-left: 10px;
+        }
 
-        nav .current_page_parent.arrow a:after {
-            border-top: 5px solid #a2ccd3;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            vertical-align: middle;
-            }
-            
-        nav .current_page_item.arrow span:after {
-            width: 0px;
-            height: 0px;
-            content: "";
-            border-top: 5px solid #ebeadc;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            display: inline-block;
-            margin-left: 10px;
-            vertical-align: middle;
-            }            
+
+        nav .current_page_parent.arrow a:after, nav .current_page_item.arrow span:after {
+            transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+            }        
         
         nav .arrow .sub-menu a:after {
             border: 0;
