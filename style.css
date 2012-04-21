@@ -80,7 +80,6 @@ a:hover, a:active {
 .wrap {
 	width: 960px;
 	background: url('img/top-bg.png') no-repeat;	
-	border-: 1px dotted #505050;
 	margin: auto;
 	position: relative;
 	padding: 20px;
@@ -104,13 +103,21 @@ a:hover, a:active {
 	background-color:rgba(50,50,50,.39);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050);
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050)";    
-    border: dotted #999;
+    border: 1px dotted #999;
     border-width: 1px;
+        -webkit-border-image: url(img/border.gif) 1 repeat;
+        -moz-border: 1px dotted #999;
+        -o-border-image: url(img/border.gif) 1 repeat;
+    border-image: url(img/border.gif) 1 repeat;
     }
     
 #columnleft {
 	width: 640px;
-	border-right: 1px dotted #999;
+    border-right: 1px dotted #999;
+    border-width: 0 1px 0 0;
+        -webkit-border-image: url(img/border.gif) 1 repeat;
+        -o-border-image: url(img/border.gif) 1 repeat;
+    border-image: url(img/border.gif) 1 repeat;
 	background-image: url('img/bg.jpg');
 	background-position-y: -21px;
 	display: inline-block;
@@ -175,6 +182,40 @@ nav {
         height: 100%;
         display: block;        
         }
+        
+    nav .arrow a:after {
+        width: 0px;
+        height: 0px;
+        content: "";
+        border-top: 5px solid transparent;
+        border-left: 5px solid #a2ccd3;
+        border-bottom: 5px solid transparent;
+        display: inline-block;
+        margin-left: 10px;
+        }
+
+        nav .current_page_parent.arrow a:after {
+            border-top: 5px solid #a2ccd3;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            vertical-align: middle;
+            }
+            
+        nav .current_page_item.arrow span:after {
+            width: 0px;
+            height: 0px;
+            content: "";
+            border-top: 5px solid #ebeadc;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+            }            
+        
+        nav .arrow .sub-menu a:after {
+            border: 0;
+            }
 	
 	nav a:link, nav a:visited { 
 		opacity: .5;
@@ -272,19 +313,23 @@ nav {
     float: left;
     line-height: 1.825em;
     margin: 0;
-    padding: 1% 2%;    
+    padding: 5px 10px;    
     }
     
 #searchform input[type=submit] {
-		width: 24.75%;
+		width: 29%;
 		height: 30px;
 		background: url('img/button-bg.jpg');
-		border: 1px dotted #8a8e8f;
+		border: 1px dotted #999;
+		box-sizing: border-box;
+		  -webkit-box-sizing: border-box;
+		  -moz-box-sizing: border-box;
+		  -o-box-sizing: border-box;
 		color: #ebeadc;
 		cursor: pointer;
 		font-family: "Vollkorn", serif;
 		font-size: .875em;
-		line-height: 1.125em;
+		line-height: 30px;
 		margin: 0;
 		text-shadow: -1px -1px 1px #343434;
 		text-transform: uppercase;

@@ -4,7 +4,7 @@
 			
 				<nav>
 		
-        			<?php wp_nav_menu( array ('menu' => 'Home Menu')); ?>
+        			<?php wp_nav_menu( array('walker' => new Arrow_Walker_Nav_Menu)); ?>
         		
         		</nav>
 						
