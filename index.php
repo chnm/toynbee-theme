@@ -18,7 +18,7 @@
 
 					<div class="text">
 						<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permalink to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-						<p class="meta">Posted by <?php the_author(); ?> at <?php the_time(); ?> in <?php the_category(', '); ?> <?php comments_popup_link('&middot; Comments ( 0 )', '&middot; Comments ( 1 )', '&middot; Comments ( % )'); ?></p>
+						<p class="meta">Posted by <?php the_author(); ?> at <?php the_time(); ?> in <?php the_category(', '); ?> <?php comments_popup_link('&middot; Comments ( 0 )', '&middot; Comments ( 1 )', '&middot; Comments ( % )', 'comments-number', '&middot; Comments  disabled'); ?></p>
 						<?php the_content(); ?>
 					</div>
 				
