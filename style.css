@@ -26,6 +26,7 @@ body {
 	line-height: 1.5em;
 	margin: 0;
 	padding: 0;
+	word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6, label {
@@ -74,6 +75,13 @@ a:hover, a:active {
 	color: #c1eaf1;
 	text-decoration: none;
 	}
+	
+::selection {
+	background: #808080; /* Safari */
+	}
+::-moz-selection {
+	background: #808080; /* Firefox */
+}
 
 /* ------ Global classes ------ */
 
@@ -133,16 +141,16 @@ a:hover, a:active {
 	}
 	
 #title a {
-	display: block;
-	padding: 20px 0 10px 20px;    
+	display: inline-block;
+	padding: 0 0 0 20px;    
     }
 
 #title h1 {
 	color: #f8f7eb;
 	font-family: 'Josefin Slab', serif;
-	font-size: 2.5em;
+	font-size: 40px;
 	font-weight: normal;
-	line-height: 1.25em;
+	line-height: 80px;
 	margin: 0;
 	text-shadow: 2px 2px 0px #3e5051;
 		-moz-text-shadow: 2px 2px 0px #3e5051;
@@ -169,7 +177,7 @@ nav {
 		height: 100%;
 		border-bottom: 1px dotted #999;
 		font-family: "Vollkorn";
-		line-height: 30px;
+		line-height: 28px;
 		list-style: none;
 		margin: 0;
 		text-align: left;
@@ -192,7 +200,7 @@ nav {
         margin-left: 10px;
         }
         
-    nav .current_page_item.arrow span:after {
+    nav .current-menu-item.arrow span:after {
         content: "";
         border-top: 5px solid transparent;
         border-left: 5px solid #ebeadc;
@@ -202,7 +210,7 @@ nav {
         }
 
 
-        nav .current_page_parent.arrow a:after, nav .current_page_item.arrow span:after {
+        nav .current_page_parent.arrow a:after, nav .current-menu-item.arrow span:after {
             transform: rotate(90deg);
                 -webkit-transform: rotate(90deg);
                 -moz-transform: rotate(90deg);
@@ -232,11 +240,11 @@ nav {
             border: 0;
             }
 
-    nav .current_page_item .sub-menu, nav .current_page_ancestor .sub-menu {
+    nav .current-menu-item .sub-menu, nav .current_page_ancestor .sub-menu {
         display: block;    
         }
         
-    nav .current_page_item .sub-menu a, nav .current_page_parent a {
+    nav .current-menu-item .sub-menu a, nav .current_page_parent a {
     	background-color:rgb(50,50,50);
     	background-color:rgba(50,50,50,.8);
     		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050);
@@ -244,7 +252,7 @@ nav {
         display: block;
         }
         
-    nav .current_page_item span {
+    nav .current-menu-item span {
     	background-color:rgb(50,50,50);
     	background-color:rgba(50,50,50,.8);
     		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050);
@@ -285,7 +293,7 @@ nav {
             }
 
 #searchform {
-    margin: 26px 10px;
+    margin: 26px 10px 25px 10px;
     }
 
 #searchform input[type=text] {
@@ -352,7 +360,12 @@ nav {
 	background-position: 5px -53px;
 	margin: 0;
 	padding: 20px 0;
-	}	
+	}
+	
+.date {
+    font-family: "Vollkorn", serif;
+    font-variant: small-caps;
+    }
 
 .intro {
 	border-bottom: 1px dotted #8a8e8f;
@@ -430,42 +443,49 @@ nav {
 
 .postname { margin: 0; }
 
-.meta {
-	width: 70px;
-	clear: left;
-	float: left;
-	margin-left: -20px;
-	}
 	
-.date, .gce-list-title  {
-	width: 50px;
-	background-color:rgb(50,50,50);
-	background-color:rgba(50,50,50,.6);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050);
-		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050)";	
+.post-date, .gce-list-title  {
+    background-color: #323232;
+    background-color: rgb(80, 80, 80);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050)";
 	border: 1px dotted #8a8e8f;
-	display: block;
+	clear: both;
+	float: left;
 	font-family: "Vollkorn", serif;
 	font-size: .875em;
 	font-variant: small-caps;
 	font-weight: 400 !important;
-	margin: 0 10px 20px 0;
-	padding: 10px;
-	text-align: center;
+	line-height: 30px;
+	margin: 10px 0 30px -20px;
+	padding: 0 20px;
 	white-space: normal;
 	}
 	
+	.post .date:empty {
+    	display: none;
+	}
+	
 #pagination, #postnav {
-	width: 540px;
-	float: right;
-	margin: 0 10px;
+	margin: 0;
+	float: left;
 	}
 	
 	#postnav {
+		width: 100%;
 		border-top: 1px dashed #999;
-		padding-top: 20px;
+		box-sizing: border-box;
+    		-webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+		padding: 20px 20px 0 20px;
 		}
-
+		
+        #postnav:after {
+            content: "";
+            clear: both;
+            }      
+    
 	#pagination p {
 		background-color:rgb(50,50,50);
 		background-color:rgba(50,50,50,.6);
@@ -491,6 +511,7 @@ nav {
 		
 	.older {
 		float: left;
+		margin-right: 10px;
 		}		
 	
 .comments-link {
@@ -504,16 +525,15 @@ nav {
 	text-align: center;
 	}
 	
-.categories {
+.meta {
 	font-family: "Vollkorn", serif;
 	font-style: italic;
 	margin: 0 0 20px 0;
 	}
 	
 .text {
-	width: 540px;
-	float: left;
-	margin: 0 0 40px 20px;
+	clear: both;
+	margin: 0 0 44px 0;
 	}
 	
 	.text h2 {
@@ -542,21 +562,16 @@ nav {
 		line-height: 2em;
 		margin: 0;
 		}
-	
-	/* .subscriber:nth-child(2n) {
-		clear: left;
-		float: left;
-		} */
 		
 /* ------ Single Post ------ */
 
 #comments-area {
-	width: 540px;
-	float: right;
-	margin-right: 10px;
+	width: 620px;
+	clear: both;
 	}
 	
 	#comments-area ol {
+        margin: 0;
 		padding: 0;
 		}
 	
@@ -567,7 +582,7 @@ nav {
 #respond {
 	background:url('img/reply-bg.jpg');
 	overflow: auto;
-	margin: 0 0 40px 0;
+	margin: 0;
 	}
 	
 	#respond h3 {
@@ -622,6 +637,7 @@ nav {
 		
 #respond-form {
 	background:url('img/compass.png') no-repeat;
+	background-position: top right;	
 	overflow: auto;
 	padding: 20px;
 	}
@@ -633,7 +649,7 @@ nav {
 	}
 	
 	#comments h2 {
-		border-bottom: 1px solid #666;
+		border-bottom: 1px dashed #999;
 		font-style: italic;
 		margin: 0 0 30px 0;
 		padding: 0 0 20px 0;
@@ -646,12 +662,16 @@ nav {
 	padding: 0 0 20px 0;
 	}
 	
+	.comment:last-child {
+	   margin: 0;
+	   }
+	
 	.comment h3 {
 		margin: 0;
 		}
 
 ul.children {
-	margin: 0;
+	margin: 40px 0 0 0;
 	padding: 0;
 	}
 		
@@ -659,7 +679,7 @@ ul.children {
 	border-bottom: 0;
 	border-top: 1px solid #666;
 	margin: 40px 0 0 0;
-	padding: 40px 0 0 60px;
+	padding: 40px 0 20px 60px;
 	}
 
 .gravatar {

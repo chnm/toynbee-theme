@@ -1,3 +1,5 @@
+<?php /* Template Name: NGH */ ?>
+
 <?php define( 'WP_USE_THEMES', false ); get_header(); ?>
 		
 		<section id="columnleft">
@@ -9,6 +11,8 @@
             </header>
 		
 			<section id="leftcontent">
+			
+                <?php query_posts('category_name=ngh-blog'); ?>
         			
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 				
@@ -23,17 +27,18 @@
 					</div>
 				
 				</article>
-
-				<div id="postnav">
-					<p class="older"><?php echo next_post_link('%link','&laquo; Older Post'); ?></p>
-					<p class="newer"><?php echo previous_post_link('%link','Newer Post &raquo;'); ?></p>
-				</div>	
-				
-				<?php comments_template('', true); ?>
 				
 				<?php endwhile; else: ?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 				<?php endif; ?>
+				
+				
+				<div id="pagination">
+					<?php next_posts_link('<p class="older">&laquo; Older Entries</p>','') ?>
+					<?php previous_posts_link('<p class="newer">Newer Entries &raquo;</p>') ?>
+				</div>		
+				
+				<?php wp_reset_query(); ?> 
 		
 			</section>
 	

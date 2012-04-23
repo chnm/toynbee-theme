@@ -27,7 +27,7 @@ foreach ( $comments as $comment )
 <?php if ( ! empty($comments_by_type['comment']) ) : ?>
  
          		       <div id="comments-list">
-                    <h2><?php printf($comment_count > 1 ? __('<span>%d</span> comments', 'toynbee') : __('<span>One</span> Comment', 'toynbee'), $comment_count) ?></h2>
+                    <h2><?php printf($comment_count > 1 ? __('<span>%d</span> comments on this post', 'toynbee') : __('<span>One</span> comment on this post', 'toynbee'), $comment_count) ?></h2>
  
 <?php /* If there are enough comments, build the comment navigation  */ ?>
 <?php $total_pages = get_comment_pages_count(); if ( $total_pages > 1 ) : ?>
@@ -135,3 +135,5 @@ foreach ( $comments as $comment )
                 </div><!-- #respond -->
 <?php endif /* if ( 'open' == $post->comment_status ) */ ?>
             </div><!-- #comments -->
+            
+</section>
