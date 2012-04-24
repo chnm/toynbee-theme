@@ -27,7 +27,8 @@
 				
 				    $taggedUsers = get_users('meta_value=ngh-blog');
 				    foreach ($taggedUsers as $user) {
-				        echo '<p>' . $user->user_nicename . '</p>';
+				        $currentUser = $user->ID;
+				        echo '<p>' . get_user_meta($currentUser,'first_name', true) . ' ' . get_user_meta($currentUser,'last_name', true) . '</p>';
 				        }
 				    
 				?>
