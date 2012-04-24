@@ -12,6 +12,8 @@
 		
 			<section id="leftcontent">
 			
+                <h1>New Global History Initiative</h1>
+			
                 <?php query_posts('category_name=ngh-blog'); ?>
         			
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>

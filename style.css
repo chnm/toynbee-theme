@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, label {
 h1 {
 	font-size: 2em;
 	line-height: 1.5em;
-	margin-bottom: 20px;
+	margin-bottom: 14px;
 	}
 
 h2 {
@@ -343,7 +343,7 @@ nav {
 /* ------ Single Page ------ */
 
 #leftcontent {
-	min-height: 300px;
+	min-height: 500px;
 	background: url('img/top-bg.jpg') no-repeat;
 	background-position: 5px -53px;
 	margin: 0;
@@ -369,7 +369,7 @@ nav {
 
 .intro {
 	border-bottom: 1px dotted #8a8e8f;
-	padding: 0 10px 24px 10px;    
+	padding: 0 10px 21px 10px;    
     }
 
 .intro p {
@@ -445,6 +445,7 @@ nav {
 
 	
 .post-date, .gce-list-title  {
+    width: 609px;
     background-color: #323232;
     background-color: rgb(80, 80, 80);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99505050, endColorstr=#99505050);

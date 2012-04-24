@@ -12,6 +12,8 @@
 		
 			<section id="leftcontent">
 			
+                <h1>New Diplomatic History</h1>
+			
                 <?php query_posts('category_name=ndh-blog'); ?>
         			
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
