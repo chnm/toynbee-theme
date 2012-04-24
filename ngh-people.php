@@ -29,8 +29,8 @@
 				    foreach ($taggedUsers as $user) {
 				        $currentUser = $user->ID;
 				        echo '<p>';
-				        echo get_user_meta($currentUser,'first_name', true) . ' ' . get_user_meta($currentUser,'last_name', true) ;
-				        echo '<br>' . get_user_meta($currentUser,'description', true);
+				        echo '<span class="member-name">' . get_user_meta($currentUser,'first_name', true) . ' ' . get_user_meta($currentUser,'last_name', true) . '</span>' ;
+				        echo '<br><span class="member-description">' . get_user_meta($currentUser,'description', true) . '</span>';
 				        echo '</p>';
 				        }
 				    
