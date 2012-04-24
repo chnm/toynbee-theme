@@ -28,7 +28,10 @@
 				    $taggedUsers = get_users('meta_value=ndh-blog');
 				    foreach ($taggedUsers as $user) {
 				        $currentUser = $user->ID;
-				        echo '<p>' . get_user_meta($currentUser,'first_name', true) . ' ' . get_user_meta($currentUser,'last_name', true) . '</p>';
+				        echo '<p>';
+				        echo get_user_meta($currentUser,'first_name', true) . ' ' . get_user_meta($currentUser,'last_name', true) ;
+				        echo '<br>' . get_user_meta($currentUser,'description', true);
+				        echo '</p>';
 				        }
 				    
 				?>
