@@ -20,6 +20,10 @@ class Arrow_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 }
 
+function get_tagged_users( $tagName ) {
+    
+}
+
 if ( function_exists('register_sidebar') )
     register_sidebar(array('name'=>'Events'));
     
