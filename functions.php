@@ -20,9 +20,18 @@ class Arrow_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 }
 
-function get_tagged_users( $tagName ) {
-    
+function custom_excerpt_length( $length ) {
+	return 50;
 }
+
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function excerpt_read_more_link($output) {
+ global $post;
+ return $output . '<a href="'. get_permalink($post->ID) . '"> Read More...</a>';
+}
+
+add_filter('the_excerpt', 'excerpt_read_more_link');
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array('name'=>'Events'));

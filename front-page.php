@@ -49,7 +49,7 @@
 				    
 				    <h2>Latest from the<br>New Global History Initiative Blog</h2>
 								
-				    <?php query_posts('category_name=middle-east&posts_per_page=1'); ?>
+				    <?php query_posts('category_name=ngh-blog&posts_per_page=1'); ?>
 				    
 				    <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 				    
@@ -57,7 +57,7 @@
 				        
 				        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				        
-				        <?php the_content(); ?>
+				        <?php the_excerpt(); ?>
 				        
 				    <?php endwhile; else: ?>
 				    
@@ -73,7 +73,7 @@
 				    
 				    <h2>Latest from the<br>New Diplomatic History Blog</h2>
 								
-				    <?php query_posts('category_name=politics&posts_per_page=1'); ?>
+				    <?php query_posts('category_name=ndh-blog&posts_per_page=1'); ?>
 				    
 				    <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 				    
@@ -81,7 +81,7 @@
 				        
 				        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				        
-				        <?php the_content(); ?>
+				        <?php the_excerpt(); ?>
 				        
 				    <?php endwhile; else: ?>
 				    
