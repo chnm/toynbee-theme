@@ -25,7 +25,7 @@
 				
 				<?php 
 				
-				    $tagged_once = get_users('meta_value=ngh-blog');
+				    $tagged_once = get_users('meta_value=ndh-blog');
 				    $tagged_both = get_users('meta_value=ngh-ndh');
 				    $tagged_users = array_merge($tagged_once, $tagged_both);
 				    foreach ($tagged_users as $user) {
