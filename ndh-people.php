@@ -25,15 +25,19 @@
 				
 				<?php 
 				
-				    $tagged_users = get_users('meta_value=ngh-blog');
+				    $tagged_once = get_users('meta_value=ngh-blog');
+				    $tagged_both = get_users('meta_value=ngh-ndh');
+				    $tagged_users = array_merge($tagged_once, $tagged_both);
 				    foreach ($tagged_users as $user) {
 				        $current_user = $user->ID;
-				        echo '<p>';
-				        echo '<span class="member-name">' . get_user_meta($current_user,'first_name', true) . ' ' . get_user_meta($current_user,'last_name', true) . '</span>' ;
-				        echo '<br><span class="member-description">' . get_user_meta($current_user,'description', true) . '</span>';
-				        echo '</p>';
+				        if(get_user_meta($current_user,'first_name', true)) {
+    				        echo '<p>';
+    				        echo '<span class="member-name">' . get_user_meta($current_user,'first_name', true) . ' ' . get_user_meta($current_user,'last_name', true) . '</span>' ;
+    				        echo '<br><span class="member-description">' . get_user_meta($current_user,'description', true) . '</span>';
+    				        echo '</p>';
 				        }
-				    
+				    }
+  
 				?>
 		
 			</section>

@@ -29,7 +29,7 @@
                       $custom_fields = get_post_custom();
                       $recent_pub = $custom_fields['recent_pub'];
                       foreach ( $recent_pub as $key => $value )
-                        echo  $value;                    
+                        echo  do_shortcode($value);                    
                     ?>
                     
                     </p>
