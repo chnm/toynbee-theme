@@ -28,6 +28,9 @@
 				    $tagged_once = get_users('meta_value=ndh-blog');
 				    $tagged_both = get_users('meta_value=ngh-ndh');
 				    $tagged_users = array_merge($tagged_once, $tagged_both);
+				    
+				    usort($tagged_users, 'sort_users');
+				    
 				    foreach ($tagged_users as $user) {
 				        $current_user = $user->ID;
 				        if(get_user_meta($current_user,'first_name', true)) {

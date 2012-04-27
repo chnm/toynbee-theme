@@ -131,6 +131,12 @@ a:hover, a:active {
 	margin: 0;
 	position: relative;
 	}
+	
+footer {
+    font-size: 14px;
+    margin: 20px 0;
+    text-align: center;
+    }
 
 #title {
 	background: url('img/title-bg.jpg');

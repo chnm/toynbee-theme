@@ -10,8 +10,13 @@
 						
 			</section>
 
-
 	</section>
+
+        <footer>
+            
+            <p>A property of the <a href="<?php bloginfo( 'url' ); ?>">Toynbee Foundation</a> operated in collaboration with <a href="http://chnm.gmu.edu" target="_blank">Roy Rosenzweig Center for History and New Media</a> at <a href="http://www.gmu.edu" target="_blank">George Mason University</a>.</p>
+            
+        </footer>
 		
 	</div>
 
